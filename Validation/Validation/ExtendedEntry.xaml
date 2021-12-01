@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Validation.ExtendedEntry">
+    <ContentView.ControlTemplate>
+        <ControlTemplate>
+            <Grid Margin="0" Padding="0,6">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30"/>
+                </Grid.RowDefinitions>
+                <Entry Text="{TemplateBinding Text}" 
+                       HorizontalTextAlignment="{TemplateBinding HorizontalTextAlignment}" 
+                       VerticalOptions="Center"
+                       Keyboard="{TemplateBinding Keyboard}"/>
+                <Label Text="{TemplateBinding ErrorText}" 
+                       HorizontalTextAlignment="{TemplateBinding HorizontalTextAlignment}" 
+                       TextColor="DarkRed" 
+                       VerticalOptions="End" 
+                       VerticalTextAlignment="End" 
+                       FontSize="Small"
+                       TranslationY="20" />
+            </Grid>
+        </ControlTemplate>
+    </ContentView.ControlTemplate>
+</ContentView>

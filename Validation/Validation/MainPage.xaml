@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:controls="clr-namespace:Validation"
+             x:Class="Validation.MainPage">
+
+    <Grid RowSpacing="6">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <controls:ExtendedEntry Text="{Binding Name}" ValidatesOnDataErrors="True" />
+        <controls:ExtendedEntry Grid.Row="1" Text="{Binding Email}" ValidatesOnDataErrors="True" Keyboard="Email" />
+        <Button Grid.Row="2" Text="Save" Command="{Binding SaveCommand}" />
+    </Grid>
+
+</ContentPage>
